@@ -8,11 +8,34 @@
     */
 
     //ENTRADA
-
+    const candidatoUm = prompt(`Informe o nome do primeiro candidato:`);
+    const candidatoDois = prompt(`Informe o nome do segundo candidato:`);
+    const candidatoTres = prompt(`Informe o nome do terceiro candidato:`);
+    const votantes = prompt(`Informe a quantidade de alunos votantes:`);
 
     //PROCESSAMENTO
-
+    let votosUm = 0;
+    let votosDois = 0;
+    let votosTres = 0;
+    for (contador = 1; contador <= votantes; contador++) {
+        let voto = prompt(`Aluno ${contador}, digite 1 para votar em ${candidatoUm}, 2 para votar em ${candidatoDois} ou 3 para votar em ${candidatoTres}.`);
+        if (voto == 1) {
+            votosUm++;
+        } else if (voto == 2) {
+            votosDois++;
+        } else if (voto == 3) {
+            votosTres++;
+        } else {
+            alert(`Erro! Escolha um número entre 1, 2 ou 3.`);
+            voto++;
+        }
+    }
+    let percentUm = (votosUm / votantes) * 100;
+    let percentDois = (votosDois / votantes) * 100;
+    let percentTres = (votosTres / votantes) * 100;
 
     //SAÍDA
+    document.write(`O(a) candidato ${candidatoUm} recebeu ${votosUm} votos, ficando com ${percentUm.toFixed(2)}%. <br> O(a) candidato ${candidatoDois} recebeu ${votosDois} votos, ficando com ${percentDois.toFixed(2)}%. <br> O(a) candidato ${candidatoTres} recebeu ${votosTres} votos, ficando com ${percentTres.toFixed(2)}%. `);
 
+    // ok.
 </script>

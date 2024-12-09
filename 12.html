@@ -8,8 +8,15 @@
 
 
     //PROCESSAMENTO
+    let capital = 1000;
+    let dias;
 
-
+    for (dias = 1; capital <= 2000; dias++) {
+        capital = capital * 1.02;
+    }
+    let diasUteis = dias + Math.floor(dias / 5) * 2;
     //SAÍDA
+    document.write(`Demorará ${diasUteis} dia(s) para que Joãozinho consiga o total de R$2000.`);
 
+    // ok.
 </script>
