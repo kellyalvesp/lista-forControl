@@ -6,11 +6,22 @@
     */
 
     //ENTRADA
-
+    
     
     //PROCESSAMENTO
-    
+    let populacao = 50000;
+    let cinco = 0;
+    let dez = 0;
+
+    for (let anos = 0; anos <= 10; anos++) {
+        populacao = populacao * 1.015;
+        if (anos === 5) {
+            cinco = populacao;
+        } else if (anos === 10) {
+            dez = populacao;
+        }
+    }
 
     //SAÍDA
-
+  document.write(`População prevista em um prazo de 5 anos: <br> ${cinco.toFixed(0)}. <br> Em um prazo de 10 anos: <br> ${dez.toFixed(0)}.`)
 </script>
